@@ -14,22 +14,89 @@ async function getData(): Promise<Payment[]> {
       status: "pending",
       email: "m@example.com",
     },
+    {
+      id: "728ed52f",
+      amount: 100,
+      status: "pending",
+      email: "m@example.com",
+    },
+    {
+      id: "728ed52f",
+      amount: 100,
+      status: "pending",
+      email: "m@example.com",
+    },
+    {
+      id: "728ed52f",
+      amount: 100,
+      status: "pending",
+      email: "m@example.com",
+    },
+    {
+      id: "728ed52f",
+      amount: 100,
+      status: "pending",
+      email: "m@example.com",
+    },
+    {
+      id: "728ed52f",
+      amount: 100,
+      status: "pending",
+      email: "m@example.com",
+    },
+    {
+      id: "728ed52f",
+      amount: 100,
+      status: "pending",
+      email: "m@example.com",
+    },
+    {
+      id: "728ed52f",
+      amount: 100,
+      status: "pending",
+      email: "m@example.com",
+    },
+    {
+      id: "728ed52f",
+      amount: 100,
+      status: "pending",
+      email: "m@example.com",
+    },
+    {
+      id: "728ed52f",
+      amount: 100,
+      status: "pending",
+      email: "m@example.com",
+    },
+    {
+      id: "728ed52f",
+      amount: 100,
+      status: "pending",
+      email: "m@example.com",
+    },
+    {
+      id: "728ed52f",
+      amount: 100,
+      status: "pending",
+      email: "m@example.com",
+    },
     // ...
   ];
 }
 
 const Admin = async () => {
-  const data = await getData();
+  
 
   const appointments = await getRecentAppointmentList();
+
   return (
-    <div className="m-auto flex max-w-7xl flex-col space-y-14">
+    <div className="mx-auto flex max-w-7xl flex-col space-y-14">
       <header className="admin-header">
         <Link href="/" className="cursor-pointer">
           <Image
-            src="/assetsicons/WLogo.svg"
-            height={50}
-            width={50}
+            src="/assets/icons/WLogo.svg"
+            height={32}
+            width={162}
             alt="Logo"
             className="h-8 w-fit"
           />
@@ -46,29 +113,29 @@ const Admin = async () => {
           </p>
         </section>
 
-        <section className="admi-stat">
+        <section className="admin-stat">
           <StatCard
             type="appointments"
             count={appointments.ScheduledCount}
             label="Scheduled Appointments"
-            icon="/assetsicons/appointments.svg"
+            icon="/assets/icons/appointments.svg"
           />
           <StatCard
             type="pending"
             count={appointments.pendingCount}
             label="Pending Appointments"
-            icon="/assetsicons/pending.svg"
+            icon="/assets/icons/pending.svg"
           />
           <StatCard
             type="cancelled"
             count={appointments.cancelledCount}
             label="Cancelled Appointments"
-            icon="/assetsicons/cancelled.svg"
+            icon="/assets/icons/cancelled.svg"
           />
         </section>
 
-        <DataTable columns={columns} data={appointments.documents} />
-        <DataTable columns={columns} data={data} />
+        <DataTable columns={columns} data={appointments.documents} /> 
+        
       
       </main>
     </div>

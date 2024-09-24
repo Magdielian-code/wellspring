@@ -80,3 +80,6 @@ export const getRecentAppointmentList = async () => {
     console.log(error);
   }
 };
+
+export const updateAppointment = async ({ appointmentId, userId, appointment, type }: UpdateAppointmentParams) => {
+}

@@ -18,7 +18,7 @@ const StatCard = ({ count = 0, label, icon, type }: StatCardProps) => {
         "bg-cancelled": type === "cancelled",
       })}
     >
-      <div className="flex items-center gap-4">
+      <div className="flex flex-row items-center gap-4">
         <Image
           src={icon}
           height={32}
